@@ -1,69 +1,73 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Motion - Animez vos idées</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header class="header">
-      <nav class="nav">
-        <div class="nav__logo">Motion</div>
-        <ul class="nav__menu">
-          <li><a href="#features">Fonctionnalités</a></li>
-          <li><a href="#pricing">Tarifs</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakura Voyages</title>
 
-    <main>
-      <section class="hero">
-        <h1 class="hero__title">Animez vos idées</h1>
-        <p class="hero__subtitle">
-          Le studio créatif qui donne vie à vos projets.
-        </p>
-        <button class="btn btn--primary">Commencer</button>
-      </section>
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-      <section id="features" class="features">
-        <h2>Nos fonctionnalités</h2>
-        <div class="features__grid">
-          <article class="card">
-            <h3>Rapide</h3>
-            <p>Performance optimale sur tous les appareils.</p>
-          </article>
-          <article class="card">
-            <h3>Intuitif</h3>
-            <p>Prise en main en quelques minutes.</p>
-          </article>
-          <article class="card">
-            <h3>Puissant</h3>
-            <p>Des outils pros pour créateurs ambitieux.</p>
-          </article>
-        </div>
-      </section>
-      <section class="stats">
-        <div class="stat">
-          <span class="stat__number" data-target="1250">0</span>
-          <span class="stat__label">Clients</span>
-        </div>
-        <div class="stat">
-          <span class="stat__number" data-target="98">0</span>
-          <span class="stat__label">% satisfaction</span>
-        </div>
-        <div class="stat">
-          <span class="stat__number" data-target="42">0</span>
-          <span class="stat__label">Pays</span>
-        </div>
-      </section>
-    </main>
+<body>
 
-    <footer class="footer">
-      <p>&copy: 2026 Motion. Tous droits réservés.</p>
-    </footer>
+<header class="header">
+  <nav class="nav">
+    <div class="nav__logo">Sakura Voyages <span>旅</span></div>
 
-    <script src="js/main.js"></script>
-  </body>
+    <ul class="nav__menu">
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#experiences">Expériences</a></li>
+      <li><a href="#stats">Stats</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <h1 class="hero__title">Découvrez le Japon</h1>
+    <p class="hero__subtitle">Voyage sur mesure au cœur de l’archipel</p>
+    <button class="btn btn--primary">Planifier</button>
+  </section>
+
+  <section id="destinations" class="destinations">
+    <h2>Destinations</h2>
+
+    <div class="destinations__grid">
+      <article class="card">
+        <h3>Mont Fuji</h3>
+        <p>Vue spectaculaire et onsen</p>
+      </article>
+
+      <article class="card">
+        <h3>Kyoto</h3>
+        <p>Temples et traditions</p>
+      </article>
+
+      <article class="card">
+        <h3>Tokyo</h3>
+        <p>Mégapole futuriste</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="stats" class="stats">
+    <div class="stat">
+      <span class="stat__number" data-target="4800">0</span>
+      <span>Voyageurs</span>
+    </div>
+    <div class="stat">
+      <span class="stat__number" data-target="98">0</span>
+      <span>Satisfaction</span>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 Sakura Voyages</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
 </html>
