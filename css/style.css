@@ -26,7 +26,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: var(--font-base);
   font-size: var(--font-size-base);
@@ -34,7 +33,6 @@ body {
   color: var(--color-text);
   background: var(--color-light);
 }
-
 a {
   text-decoration: none;
   color: inherit;
@@ -46,7 +44,6 @@ button {
   cursor: pointer;
   font-family: inherit;
 }
-
 /* ===== Header ===== */
 .header {
   background: var(--color-dark);
@@ -110,6 +107,96 @@ button {
   padding: var(--space-md);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+/* ===== Transitions ===== */
+/* Boutons */
+.btn {
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+.btn:active {
+  transform: translateY(0);
+}
+/* Cards */
+.card {
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+/* Liens navigation */
+.nav__menu a {
+  position: relative;
+  transition: color var(--transition-fast);
+}
+.nav__menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width var(--transition-base);
+}
+.nav__menu a:hover::after {
+  width: 100%;
+}
+
+/* ===== Animation ===== */
+/* Animation d'apparition de la hero */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero__title {
+  animation: fadeInUp 0.8s ease-out;
+}
+.hero__subtitle {
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+  /* "both" = applique les styles avant et après l'animation */
+}
+.hero .btn {
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+/* Animation de pulsation pour attirer l'œil */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+.btn--primary {
+  animation: pulse 2s infinite;
+}
+.btn--primary:hover {
+  animation: none; /* stop la pulsation au survol */
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 /* ===== Features =====*/
 .features {
