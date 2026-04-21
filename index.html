@@ -1,73 +1,704 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sakura Voyages</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sakura Voyages — 旅 — Voyagez au cœur du Japon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Shippori+Mincho:wght@400;600;800&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__logo">
+          Sakura Voyages
+          <span class="logo-jp">旅</span>
+        </div>
+        <ul class="nav__menu">
+          <li><a href="#destinations">目的地</a></li>
+          <li><a href="#experiences">体験</a></li>
+          <li><a href="#stats">実績</a></li>
+        </ul>
+        <button class="nav__cta">Réserver · 予約</button>
+      </nav>
+    </header>
 
-  <link rel="stylesheet" href="css/style.css">
-</head>
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero__content">
+          <p class="hero__eyebrow">— Agence de voyage · 旅行代理店</p>
+          <h1 class="hero__title">
+            Partez à la<br />découverte<br />du Japon
+            <span class="hero__title-jp">旅 · たび · voyage</span>
+          </h1>
+          <p class="hero__subtitle">
+            Des circuits sur-mesure au cœur de l'archipel. Du mont Fuji aux
+            ruelles de Kyoto, vivez le Japon authentique.
+          </p>
+          <div class="hero__actions">
+            <button class="btn btn--primary">
+              <span>Planifier mon voyage</span>
+            </button>
+            <button class="btn btn--secondary">Voir les circuits</button>
+          </div>
+          <div class="hero__seasons">
+            <span class="season-badge">🌸 Printemps — Sakura</span>
+            <span class="season-badge">🎆 Été — Matsuri</span>
+            <span class="season-badge">🍁 Automne — Koyo</span>
+            <span class="season-badge">❄️ Hiver — Yuki</span>
+          </div>
+        </div>
 
-<body>
+        <div class="hero__visual">
+          <div class="hero__circle">
+            <div class="sun-ring"></div>
+            <svg
+              class="sakura-svg"
+              viewBox="0 0 400 400"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <!-- Torii -->
+              <g opacity="0.22">
+                <rect x="170" y="240" width="11" height="85" fill="#c0392b" />
+                <rect x="219" y="240" width="11" height="85" fill="#c0392b" />
+                <path
+                  d="M 148 228 Q 200 205 252 228"
+                  stroke="#c0392b"
+                  stroke-width="13"
+                  stroke-linecap="round"
+                  fill="none"
+                />
+                <path
+                  d="M 158 243 L 242 243"
+                  stroke="#c0392b"
+                  stroke-width="7"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="171"
+                  y1="228"
+                  x2="162"
+                  y2="202"
+                  stroke="#8b2020"
+                  stroke-width="2"
+                />
+                <line
+                  x1="229"
+                  y1="228"
+                  x2="238"
+                  y2="202"
+                  stroke="#8b2020"
+                  stroke-width="2"
+                />
+              </g>
+              <!-- Fuji en fond -->
+              <path
+                d="M 200 95 L 128 168 L 272 168 Z"
+                fill="#2d3748"
+                opacity="0.1"
+              />
+              <path
+                d="M 200 95 L 184 122 L 216 122 Z"
+                fill="white"
+                opacity="0.6"
+              />
+              <!-- Branche cerisier -->
+              <path
+                d="M 55 375 Q 130 295 185 248 Q 215 222 268 195"
+                stroke="#1a1412"
+                stroke-width="2"
+                fill="none"
+                opacity="0.22"
+              />
+              <path
+                d="M 185 248 Q 150 222 136 200"
+                stroke="#1a1412"
+                stroke-width="1.5"
+                fill="none"
+                opacity="0.18"
+              />
+              <path
+                d="M 228 218 Q 210 188 218 165"
+                stroke="#1a1412"
+                stroke-width="1.5"
+                fill="none"
+                opacity="0.18"
+              />
+              <!-- Fleurs de cerisier -->
+              <g fill="#e8a5b0" opacity="0.75">
+                <ellipse
+                  cx="132"
+                  cy="195"
+                  rx="7"
+                  ry="4"
+                  transform="rotate(-30 132 195)"
+                />
+                <ellipse
+                  cx="132"
+                  cy="195"
+                  rx="7"
+                  ry="4"
+                  transform="rotate(42 132 195)"
+                />
+                <ellipse
+                  cx="132"
+                  cy="195"
+                  rx="7"
+                  ry="4"
+                  transform="rotate(114 132 195)"
+                />
+                <ellipse
+                  cx="132"
+                  cy="195"
+                  rx="7"
+                  ry="4"
+                  transform="rotate(186 132 195)"
+                />
+                <ellipse
+                  cx="132"
+                  cy="195"
+                  rx="7"
+                  ry="4"
+                  transform="rotate(258 132 195)"
+                />
+                <circle cx="132" cy="195" r="3" fill="#f5c0cb" />
+                <ellipse
+                  cx="218"
+                  cy="162"
+                  rx="6"
+                  ry="3.5"
+                  transform="rotate(10 218 162)"
+                />
+                <ellipse
+                  cx="218"
+                  cy="162"
+                  rx="6"
+                  ry="3.5"
+                  transform="rotate(82 218 162)"
+                />
+                <ellipse
+                  cx="218"
+                  cy="162"
+                  rx="6"
+                  ry="3.5"
+                  transform="rotate(154 218 162)"
+                />
+                <ellipse
+                  cx="218"
+                  cy="162"
+                  rx="6"
+                  ry="3.5"
+                  transform="rotate(226 218 162)"
+                />
+                <ellipse
+                  cx="218"
+                  cy="162"
+                  rx="6"
+                  ry="3.5"
+                  transform="rotate(298 218 162)"
+                />
+                <circle cx="218" cy="162" r="2.5" fill="#f5c0cb" />
+                <ellipse
+                  cx="268"
+                  cy="188"
+                  rx="7"
+                  ry="4"
+                  transform="rotate(-20 268 188)"
+                />
+                <ellipse
+                  cx="268"
+                  cy="188"
+                  rx="7"
+                  ry="4"
+                  transform="rotate(52 268 188)"
+                />
+                <ellipse
+                  cx="268"
+                  cy="188"
+                  rx="7"
+                  ry="4"
+                  transform="rotate(124 268 188)"
+                />
+                <ellipse
+                  cx="268"
+                  cy="188"
+                  rx="7"
+                  ry="4"
+                  transform="rotate(196 268 188)"
+                />
+                <ellipse
+                  cx="268"
+                  cy="188"
+                  rx="7"
+                  ry="4"
+                  transform="rotate(268 268 188)"
+                />
+                <circle cx="268" cy="188" r="3" fill="#f5c0cb" />
+              </g>
+              <circle
+                cx="200"
+                cy="200"
+                r="150"
+                stroke="#c0392b"
+                stroke-width="1"
+                fill="none"
+                opacity="0.15"
+              />
+              <circle
+                cx="200"
+                cy="200"
+                r="120"
+                stroke="#c0392b"
+                stroke-width="0.5"
+                fill="none"
+                opacity="0.08"
+              />
+            </svg>
+            <div class="hero__kanji">旅</div>
+          </div>
+        </div>
+      </section>
 
-<header class="header">
-  <nav class="nav">
-    <div class="nav__logo">Sakura Voyages <span>旅</span></div>
+      <div class="section-divider"><span>✦</span></div>
 
-    <ul class="nav__menu">
-      <li><a href="#destinations">Destinations</a></li>
-      <li><a href="#experiences">Expériences</a></li>
-      <li><a href="#stats">Stats</a></li>
-    </ul>
-  </nav>
-</header>
+      <!-- Destinations -->
+      <section id="destinations" class="destinations">
+        <div class="section-header">
+          <h2>
+            Nos destinations <span class="h2-jp">目的地 · もくてきち</span>
+          </h2>
+          <p>
+            Des circuits soigneusement sélectionnés pour vous faire vivre le
+            Japon dans toute sa profondeur.
+          </p>
+        </div>
+        <div class="destinations__grid">
+          <article class="card">
+            <svg
+              class="card__illustration"
+              viewBox="0 0 400 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="400" height="200" fill="#f0e8d8" />
+              <circle cx="60" cy="42" r="26" fill="#f7c5a0" opacity="0.38" />
+              <path
+                d="M 200 38 L 96 138 L 304 138 Z"
+                fill="#2d3748"
+                opacity="0.68"
+              />
+              <path
+                d="M 200 38 L 178 70 L 222 70 Z"
+                fill="white"
+                opacity="0.9"
+              />
+              <ellipse
+                cx="200"
+                cy="156"
+                rx="132"
+                ry="18"
+                fill="#8b9db5"
+                opacity="0.38"
+              />
+              <path
+                d="M 200 138 L 128 173 L 272 173 Z"
+                fill="#2d3748"
+                opacity="0.1"
+              />
+              <circle cx="78" cy="120" r="24" fill="#e8a5b0" opacity="0.68" />
+              <circle cx="322" cy="122" r="20" fill="#e8a5b0" opacity="0.58" />
+              <rect
+                x="76"
+                y="130"
+                width="4"
+                height="28"
+                fill="#4a3728"
+                opacity="0.4"
+              />
+              <rect
+                x="320"
+                y="130"
+                width="4"
+                height="28"
+                fill="#4a3728"
+                opacity="0.4"
+              />
+            </svg>
+            <div class="card__body">
+              <span class="card__tag">Circuit 8 jours</span>
+              <h3>Mont Fuji & Hakone</h3>
+              <span class="card__jp">富士山 · FUJI-SAN</span>
+              <p>
+                Contemplez le Fuji depuis les rives du lac Ashi. Bains onsen au
+                cœur des montagnes, entre brume et sérénité absolue.
+              </p>
+              <div class="card__footer">
+                <div class="card__price">
+                  1 890 €<span>par personne · 一人あたり</span>
+                </div>
+                <a href="#" class="card__link">Découvrir →</a>
+              </div>
+            </div>
+          </article>
 
-<main>
+          <article class="card">
+            <svg
+              class="card__illustration"
+              viewBox="0 0 400 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="400" height="200" fill="#ede4d0" />
+              <rect
+                x="186"
+                y="100"
+                width="10"
+                height="75"
+                fill="#c0392b"
+                opacity="0.65"
+              />
+              <rect
+                x="204"
+                y="100"
+                width="10"
+                height="75"
+                fill="#c0392b"
+                opacity="0.65"
+              />
+              <path
+                d="M 168 92 Q 200 74 232 92"
+                stroke="#c0392b"
+                stroke-width="12"
+                fill="none"
+                stroke-linecap="round"
+              />
+              <path
+                d="M 172 107 L 228 107"
+                stroke="#c0392b"
+                stroke-width="6"
+                stroke-linecap="round"
+              />
+              <line
+                x1="176"
+                y1="92"
+                x2="167"
+                y2="67"
+                stroke="#c0392b"
+                stroke-width="2.5"
+                opacity="0.5"
+              />
+              <line
+                x1="224"
+                y1="92"
+                x2="233"
+                y2="67"
+                stroke="#c0392b"
+                stroke-width="2.5"
+                opacity="0.5"
+              />
+              <path
+                d="M 58 130 L 58 88 L 100 66 L 142 88 L 142 130 Z"
+                fill="#2d3748"
+                opacity="0.12"
+              />
+              <path
+                d="M 48 88 L 100 60 L 152 88 Z"
+                fill="#2d3748"
+                opacity="0.08"
+              />
+              <rect
+                x="28"
+                y="118"
+                width="6"
+                height="52"
+                fill="#4a6741"
+                opacity="0.38"
+              />
+              <path
+                d="M 31 52 L 8 118 L 54 118 Z"
+                fill="#4a6741"
+                opacity="0.42"
+              />
+              <rect
+                x="352"
+                y="112"
+                width="6"
+                height="58"
+                fill="#4a6741"
+                opacity="0.38"
+              />
+              <path
+                d="M 355 46 L 332 112 L 378 112 Z"
+                fill="#4a6741"
+                opacity="0.42"
+              />
+            </svg>
+            <div class="card__body">
+              <span class="card__tag">Circuit 12 jours</span>
+              <h3>Kyoto & Nara</h3>
+              <span class="card__jp">京都・奈良 · KYOTO·NARA</span>
+              <p>
+                Temples millénaires, geishas du quartier de Gion, cerfs sacrés
+                de Nara. L'essence du Japon ancien, hors du temps.
+              </p>
+              <div class="card__footer">
+                <div class="card__price">
+                  2 450 €<span>par personne · 一人あたり</span>
+                </div>
+                <a href="#" class="card__link">Découvrir →</a>
+              </div>
+            </div>
+          </article>
 
-  <section class="hero">
-    <h1 class="hero__title">Découvrez le Japon</h1>
-    <p class="hero__subtitle">Voyage sur mesure au cœur de l’archipel</p>
-    <button class="btn btn--primary">Planifier</button>
-  </section>
+          <article class="card">
+            <svg
+              class="card__illustration"
+              viewBox="0 0 400 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="400" height="200" fill="#e8e0d0" />
+              <rect
+                x="28"
+                y="78"
+                width="34"
+                height="122"
+                fill="#2d3748"
+                opacity="0.58"
+              />
+              <rect
+                x="72"
+                y="48"
+                width="24"
+                height="152"
+                fill="#2d3748"
+                opacity="0.52"
+              />
+              <rect
+                x="108"
+                y="62"
+                width="29"
+                height="138"
+                fill="#1a1412"
+                opacity="0.48"
+              />
+              <rect
+                x="148"
+                y="28"
+                width="19"
+                height="172"
+                fill="#2d3748"
+                opacity="0.62"
+              />
+              <rect
+                x="178"
+                y="68"
+                width="38"
+                height="132"
+                fill="#1a1412"
+                opacity="0.42"
+              />
+              <rect
+                x="228"
+                y="52"
+                width="27"
+                height="148"
+                fill="#2d3748"
+                opacity="0.48"
+              />
+              <rect
+                x="266"
+                y="38"
+                width="21"
+                height="162"
+                fill="#1a1412"
+                opacity="0.58"
+              />
+              <rect
+                x="298"
+                y="72"
+                width="34"
+                height="128"
+                fill="#2d3748"
+                opacity="0.48"
+              />
+              <rect
+                x="342"
+                y="58"
+                width="29"
+                height="142"
+                fill="#1a1412"
+                opacity="0.52"
+              />
+              <path
+                d="M 148 28 L 157 -8 L 166 28 Z"
+                fill="#c0392b"
+                opacity="0.78"
+              />
+              <rect
+                x="79"
+                y="88"
+                width="9"
+                height="3"
+                fill="#e8a5b0"
+                opacity="0.68"
+                rx="1"
+              />
+              <rect
+                x="183"
+                y="108"
+                width="7"
+                height="3"
+                fill="#c9a96e"
+                opacity="0.68"
+                rx="1"
+              />
+              <rect
+                x="233"
+                y="92"
+                width="9"
+                height="3"
+                fill="#e8a5b0"
+                opacity="0.58"
+                rx="1"
+              />
+              <rect
+                x="0"
+                y="168"
+                width="400"
+                height="32"
+                fill="#8b9db5"
+                opacity="0.1"
+              />
+              <circle cx="338" cy="33" r="19" fill="#c9a96e" opacity="0.28" />
+            </svg>
+            <div class="card__body">
+              <span class="card__tag">Circuit 10 jours</span>
+              <h3>Tokyo & Shibuya</h3>
+              <span class="card__jp">東京・渋谷 · TOKYO·SHIBUYA</span>
+              <p>
+                Néons de Shinjuku, calme de Yanaka, gastronomie étoilée. Tokyo,
+                la mégapole aux mille visages inoubliables.
+              </p>
+              <div class="card__footer">
+                <div class="card__price">
+                  2 190 €<span>par personne · 一人あたり</span>
+                </div>
+                <a href="#" class="card__link">Découvrir →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
 
-  <section id="destinations" class="destinations">
-    <h2>Destinations</h2>
+      <!-- Expériences -->
+      <section id="experiences" class="experiences">
+        <div class="experiences__inner">
+          <div class="section-header">
+            <h2>
+              Expériences uniques <span class="h2-jp">体験 · たいけん</span>
+            </h2>
+            <p>
+              Chaque voyage inclut des moments d'immersion authentique dans la
+              culture japonaise.
+            </p>
+          </div>
+          <div class="experiences__grid">
+            <div class="exp-item">
+              <span class="exp-item__icon">茶</span>
+              <h3>Cérémonie du thé</h3>
+              <span class="item-jp">CHADO · 茶道</span>
+              <p>
+                Initiez-vous à l'art du thé matcha dans une maison de thé
+                traditionnelle de Kyoto.
+              </p>
+            </div>
+            <div class="exp-item">
+              <span class="exp-item__icon">食</span>
+              <h3>Cours de cuisine</h3>
+              <span class="item-jp">RYORI · 料理</span>
+              <p>
+                Apprenez à préparer sushi, ramen et wagashi avec un chef au
+                marché de Tsukiji.
+              </p>
+            </div>
+            <div class="exp-item">
+              <span class="exp-item__icon">湯</span>
+              <h3>Bains Onsen</h3>
+              <span class="item-jp">ONSEN · 温泉</span>
+              <p>
+                Détente dans les eaux thermales volcaniques face au Fuji — un
+                rituel incontournable.
+              </p>
+            </div>
+            <div class="exp-item">
+              <span class="exp-item__icon">道</span>
+              <h3>Pèlerinage Kumano</h3>
+              <span class="item-jp">KUMANO KODO · 熊野古道</span>
+              <p>
+                Marchez sur les chemins sacrés inscrits au patrimoine mondial de
+                l'UNESCO.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <div class="destinations__grid">
-      <article class="card">
-        <h3>Mont Fuji</h3>
-        <p>Vue spectaculaire et onsen</p>
-      </article>
+      <!-- Stats -->
+      <section id="stats" class="stats">
+        <div class="stats__inner">
+          <div class="stat">
+            <span class="stat__number" data-target="4800">0</span>
+            <span class="stat__label">旅人 · Voyageurs accompagnés</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number" data-target="15">0</span>
+            <span class="stat__label">年 · Années d'expérience</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number" data-target="32">0</span>
+            <span class="stat__label">路線 · Circuits disponibles</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number" data-target="98">0</span>
+            <span class="stat__label">満足 · % de satisfaction</span>
+          </div>
+        </div>
+      </section>
 
-      <article class="card">
-        <h3>Kyoto</h3>
-        <p>Temples et traditions</p>
-      </article>
+      <!-- CTA -->
+      <section class="cta-section">
+        <div class="cta-inner">
+          <p class="eyebrow">— Votre aventure commence ici · 始まり</p>
+          <h2>Prêt à vivre<br />le Japon ?</h2>
+          <p>
+            Nos experts vous conçoivent un circuit sur-mesure adapté à vos
+            envies, votre budget et la saison de votre choix.
+          </p>
+          <div class="cta-buttons">
+            <button class="btn btn--primary">
+              <span>Demander un devis gratuit</span>
+            </button>
+            <button class="btn btn--secondary">Nous contacter · 連絡</button>
+          </div>
+        </div>
+      </section>
+    </main>
 
-      <article class="card">
-        <h3>Tokyo</h3>
-        <p>Mégapole futuriste</p>
-      </article>
-    </div>
-  </section>
+    <footer class="footer">
+      <div class="footer__logo">Sakura Voyages <span>旅</span></div>
+      <div class="footer__links">
+        <a href="#">Mentions légales</a>
+        <a href="#">CGV</a>
+        <a href="#">Nos guides</a>
+        <a href="#">Contact</a>
+      </div>
+      <p class="footer__copy">© 2026 Sakura Voyages · 桜旅</p>
+    </footer>
 
-  <section id="stats" class="stats">
-    <div class="stat">
-      <span class="stat__number" data-target="4800">0</span>
-      <span>Voyageurs</span>
-    </div>
-    <div class="stat">
-      <span class="stat__number" data-target="98">0</span>
-      <span>Satisfaction</span>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <p>© 2026 Sakura Voyages</p>
-</footer>
-
-<script src="js/main.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>
